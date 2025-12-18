@@ -33,8 +33,9 @@ export class Car {
         this.physicsWorld = physicsWorld;
 
         const position = options.position || new THREE.Vector3(0, 0.5, 0);
-        const modelPath = options.modelPath || '/kenney_car-kit/Models/GLB format/garbage-truck.glb';
+        const modelPath = options.modelPath || '/kenney_car-kit/Models/GLB format/sedan.glb';
         // tractor
+        // ambulance
         // van
         // truck
         // suv-luxury
@@ -42,6 +43,8 @@ export class Car {
         // race
         // firetruck
         // garbage-truck
+        // police
+        // sedan
 
         // cria um grupo para o mesh do carro
         this.mesh = new THREE.Group();
@@ -69,7 +72,7 @@ export class Car {
             shape: carShape,
             linearDamping: 0.3,
             angularDamping: 0.5,
-            allowSleep: false, // importante: nao deixar o corpo dormir
+            allowSleep: false,
         });
 
         // fixa a rotacao nos eixos X e Z para evitar que o carro capote
