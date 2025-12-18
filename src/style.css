@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'SF Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+    outline: none; 
+}
+
+#game-container:focus {
+    outline: none;
+}
+
+#game-container canvas {
+    display: block;
+}
+
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#instructions {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 410px;
+    backdrop-filter: blur(10px);
+    pointer-events: auto;
+}
+
+#instructions h2 {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+#instructions p {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+#instructions .green {
+    font-weight: bold;
+}
+
+#instructions .red {
+    font-weight: bold;
+}
+
+#instructions .controls {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+#instructions .controls p {
+    margin-bottom: 4px;
+    font-size: 1.rem;
+}
+
+#instructions .hint {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#instructions .penalty {
+    font-size: 1.4rem;
+    margin-top: 8px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#fps-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #00ff00;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'SL Mono', 'Monaco', monospace;
+    backdrop-filter: blur(5px);
+}
+
+#status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+#status p {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+#status #speed {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#status #score {
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: color 0.2s;
+}
+
+#win-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    pointer-events: auto;
+}
+
+#win-message h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+#win-message p {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#win-message button {
+    padding: 15px 40px;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #00cc66, #00aa55);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
