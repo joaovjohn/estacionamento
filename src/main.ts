@@ -1,3 +1,6 @@
+/**
+*  2221101018 - João John
+**/
 import * as THREE from 'three';
 import { Game } from './core';
 import { Car, Track, ObstacleManager, ParkingSpotManager } from './objects';
